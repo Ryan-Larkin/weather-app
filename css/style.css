@@ -1,0 +1,101 @@
+/* Box-sizing fix! */
+html {
+  box-sizing: border-box;
+}
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    background-image:url('../images/default.jpg');
+    background-size: cover;
+    background-repeat:no-repeat;
+    background-attachment: fixed;
+    background-position:center;
+    margin: 0;
+    padding: 0;
+}
+
+#app {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    
+    width:100vw;
+    height:100vh;
+}
+
+.main-app {
+    background-color: rgba(50,50,50, 0.9);
+    border-radius:5px;
+    max-width:340px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    flex:1;
+}
+
+.title {
+    margin:5px 25px 25px 25px;
+    padding-top:25px;
+    color:#eee;
+}
+
+.city-form {
+    margin:25px 25px 5px 25px;
+}
+
+.city-weather {
+    margin:25px 25px 30px 25px;
+    color:#eee;
+    font-weight:bold;
+}
+
+.city-weather > p {
+    display:flex;
+    justify-content:flex-start;
+}
+
+.city-input {
+    width:150px;
+    border-radius:5px;
+    border:1px solid #eee;
+    padding:5px 10px 5px 10px;
+}
+
+.city-input:focus {
+    outline:none;
+}
+
+.get-weather-button {
+    border-radius:5px;
+    border:1px solid #eee;
+    color:white;
+    padding:5px 10px 5px 10px;
+    
+    background: blue; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#76A6C9, #4E7FA2); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#76A6C9, #4E7FA2); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#76A6C9, #4E7FA2); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#76A6C9, #4E7FA2); /* Standard syntax */
+}
+
+.location-address, .current-weather, .current-temperature {
+    visibility:hidden;
+}
+
+.temp-type {
+    margin:5px 0 0 0;
+    padding:0;
+    color:#eee;
+    display:flex;
+    justify-content:space-between;
+    
+}
+
+.temp-type > p {
+    padding:0;
+    margin:0;
+}
